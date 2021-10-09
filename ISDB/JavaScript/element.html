@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="output"></div>
+    <ul id="ul">
+        <li>list one</li>
+        <li>list one</li>
+        <li>list one</li>
+        <li>list one</li>
+        <li>list one</li>
+        <li>list one</li>
+    </ul>
+    <button id="btn" name="button" value="Button">Button</button>
+    <script>
+        var ul=document.getElementById("ul");
+        var btn=document.getElementById("btn");
+        btn.onclick = function(){
+            if(ul.style.display =="none"){
+                ul.style.display ="block";
+            }else{
+                ul.style.display = 'none';
+            }
+        }
+        document.getElementById("output").innerHTML="Azizul islam";
+        document.getElementById("output").style.cssText='color:red;background:blue;padding:10px'
+    </script>
+</body>
+</html>

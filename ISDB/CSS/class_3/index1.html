@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix:before,
+        .clearfix:after{
+            content: '';
+            display: table;
+        }
+        .clearfix:after{
+            clear: both;
+        }
+        .container{
+            width:90%;
+            background: #888;
+            margin: 0 auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .row{
+            width: 100%;
+            margin-bottom: 10px;
+            
+        }
+        .col{
+            float: left;
+            margin-right: 10px;
+            background: #fff;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 100%;
+            border-radius: 5px;
+            min-height: 100px;
+        }
+        .r0-col1{
+            margin-right: 0;
+        }
+        .r1-col1{
+            width: calc(20% - 10px);
+        }
+        .r1-col2{
+            width: calc(70% - 10px);
+        }
+        .r1-col3{
+            width: 10%;
+            margin-right: 0px;
+        }
+        .r2-col1{
+            width: calc(33.33% - 10px);
+        }
+        .r2-col2{
+            width: calc(33.33% - 10px);
+        }
+        .r2-col3{
+            width: 33.34%;
+            margin-right: 0;
+        }
+        .r3-col1{
+            width: calc(80% - 10px);
+        }
+        .r3-col2{
+            width: 20%;
+            margin-right: 0;
+            
+        }
+        .lrow{
+            margin-bottom: 0;
+        }
+        @media screen and (max-width:480px){
+            .container{
+                width: 100%;
+            }
+            .row{
+                margin-bottom: 0;
+            }
+            .col{
+                width: 100% !important;
+                clear: left;
+                margin-bottom: 10px !important;
+            }
+            .r3-col2{
+                margin-bottom: 0px !important;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col r0-col1">
+                1
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col r1-col1">
+                2
+            </div>
+            <div class="col r1-col2">
+                3
+            </div>
+            <div class="col r1-col3">
+                4
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col r2-col1">
+                5
+            </div>
+            <div class="col r2-col2">
+                6
+            </div>
+            <div class="col r2-col3">
+                7
+            </div>
+        </div>
+        <div class="row lrow clearfix">
+            <div class="col r3-col1">
+                8
+            </div>
+            <div class="col r3-col2">
+                9
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

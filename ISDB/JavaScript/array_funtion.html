@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var trees = new Array("Elm", "Pine", "Oak");
+        var bigBush = trees.join(" |");
+        document.write(bigBush + "<br>");
+
+        var arrConcat = trees.concat("Apple", "Banana<br>");
+        document.write(arrConcat);
+        alert(arrConcat);
+
+        var zoo = new Array("Zebras", "Lions", "Apes", "Tigers");
+        zoo.reverse();
+        document.write(zoo);
+        zoo.sort();
+        var newZoo = "";
+        for (i = 0; i < zoo.length; i++) {
+            newZoo += (zoo[i] + "<br>");
+
+        }
+        document.write(newZoo + "<br>");
+
+    </script>
+</body>
+
+</html>

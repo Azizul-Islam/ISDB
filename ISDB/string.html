@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="display"></div>
+    <script>
+        var text="Itisimpolite to wink!";
+        /*
+        var str1=text.substring(2,4);
+        alert(str1);
+        
+        var str2=text.substr(2,5);
+        alert(str2);
+       */
+        document.getElementById("display").innerHTML="Hello".toUpperCase().toLowerCase().strike().italics().bold().big().link("http://vcampus.co");
+
+        // RegExp related function
+        var str = "The raiN in SPAIN stays mainly in the plain"; 
+        var regx=/spain/i
+        var status=regx.test(str);
+        
+        var res = str.match(/ain/ig);
+        
+        document.getElementById("display").innerHTML=res;
+
+    </script>
+</body>
+</html>

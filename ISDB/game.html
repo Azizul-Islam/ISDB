@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   </head>
+   <body>
+    <script>
+        
+        var guess=Math.floor(Math.random() * 100) + 1;
+        var score=1000;
+
+        for(i=1;i<=10;i++){
+
+            var number=prompt("Say what I guess?");
+                number=parseInt(number);
+
+            if(isNaN(number)){
+
+                alert("No number found");
+            
+            }else{
+                
+                if(number>guess){              
+                    alert("Your number is greater.");
+                }else if(number<guess){
+                    alert("Your number is smaller");
+                }else{              
+                    alert("Yahoo! you are win! You took "+i+" times");
+                    document.write("<h4>Your score is:"+Math.ceil(score/i)+"</h4>");
+                    break;
+                }
+
+                if(i==6){
+                    alert("You lose! Game Over.");
+                    break;
+                }
+        }
+
+        }//end for
+         
+
+    </script>
+   </body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+		ul{list-style:none;}
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .container {
+            width: 90%;
+            min-height: 500px;
+            margin: 0 auto;
+            background: #777;
+            padding: 10px;
+
+        }
+
+        .row {
+            width: 100%;
+            min-height: 70px;
+            margin-bottom: 10px;
+
+        }
+
+        .col {
+            width: 100%;
+            background: #fff;
+            margin-right: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            min-height: 20px;
+            border-radius: 5px;
+            float: left;
+            min-height: 200px;
+        }
+
+	a{ text-decoration:none}
+		
+
+        .r0-col1 {
+            min-height: 100px;
+        }
+
+        .r1-col1 {
+            width: calc(30% - 10px);
+        }
+		.r1-col1, .r1-col2{ min-height:70px} 
+
+        .r1-col2 {
+            width: 70%;
+			margin-right:0;
+        }
+
+
+        
+        .r2-col1{width: calc(33.33% - 10px);}
+        .r2-col2{width: calc(33.33% - 10px);}
+        .r2-col3{width: 33.34%; margin-right: 0;}
+        
+        .r3-col1{width: calc(80% - 10px);}
+        .r3-col2{width: 20%; margin-right: 0;}
+        .lastRow{margin-bottom: 0px}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+        
+        @media screen and (max-width: 480px){
+            .container{width: 100%}
+            .row{margin-bottom: 0}
+            .col{clear: left; width: 100% !important; margin-bottom: 10px !important;}
+            .r3-col2{margin-bottom: 0px !important}
+        }
+
+    </style>
+    
+    <style>
+	
+	.box{
+		width:100%;
+		height:200px;
+		/*box-shadow:0 0 3px 3px rgba(0,0,0,.2);
+		border-radius:5px;*/
+		margin:0 auto;
+	}
+	.photo{
+		background-image:url(img/4.webp);
+		background-position:center;
+		background-size:cover;
+		height:100%;
+		
+		position:relative;
+		
+	}
+	.photo .desc{
+		color:#fff;
+		padding:10px;
+		box-sizing:border-box;
+		position:absolute;
+		bottom:0;
+		width:100%;
+		
+		background:#000;
+		opacity:0.6;
+		
+	}
+	.news-list{
+		margin:0;
+		padding:0;
+		list-style:none;
+		width:270px;
+	}
+	.news-list li{
+		border-bottom:1px solid #CACACA;
+		padding:5px;
+		box-sizing:border-box;
+	}
+	.news-list .wrap{}
+	.news-list .wrap .c{float:left;}
+	.news-list .wrap .c1{
+			width:20%;
+			margin-right:10px;
+	}
+	.news-list .wrap .c2{
+			width:calc(80% - 10px);
+			font-family:solaimanLipi;
+			
+		}
+		.news-list .wrap .c2 a{color:#333;}
+		
+		
+		
+		/* menu part css */
+		.main_menu ul li{
+			float:left;
+			padding:0 10px 0 10px;
+		}
+		.main_menu ul li a{    
+			padding: 4px 10px 0;
+			display: block;
+			border-bottom: 4px solid #fff;
+			color: #333;
+			padding:10px;
+		}
+		.main_menu ul li a:hover{background:#777;}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="row clearfix">
+            <div class="col r1-col1">
+               <a href="#"><img src="img/Prothom-Alo (1).png"></a>
+            </div>
+            <div class="col r1-col2">
+               <div class="main_menu">
+               	<ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">home</a></li>
+                    
+               </ul>
+               </div>
+            </div>
+
+        </div>
+        <div class="row clearfix">
+            <div class="col r0-col1">
+                1
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col r2-col1">
+                <div class="box">
+                    <a href="#">
+                    <div class="photo">
+                        <div class="desc">করোনার কারণে শিক্ষাপ্রতিষ্ঠান বন্ধের দাবি জোরদার হচ্ছে</div>
+                    </div>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="col r2-col2">
+               <ul class="news-list">
+    			<li>
+        			<div class="wrap clearfix">
+            			<div class="c c1"><a href="#"><img src="img/2.webp" style="width:100%"></a></div>
+                		<div class="c c2"><a href="#"> এক্সপ্রেসওয়েতে ৭০ মিনিট</a></div>
+            		</div>
+       			 </li>
+                 <li>
+        			<div class="wrap clearfix">
+            			<div class="c c1"><a href="#"><img src="img/2.webp" style="width:100%"></a></div>
+                		<div class="c c2"><a href="#"> এক্সপ্রেসওয়েতে ৭০ মিনিট</a></div>
+            		</div>
+       			 </li>
+                 <li>
+        			<div class="wrap clearfix">
+            			<div class="c c1"><a href="#"><img src="img/2.webp" style="width:100%"></a></div>
+                		<div class="c c2"><a href="#"> এক্সপ্রেসওয়েতে ৭০ মিনিট</a></div>
+            		</div>
+       			 </li>
+                 <li>
+        			<div class="wrap clearfix">
+            			<div class="c c1"><a href="#"><img src="img/2.webp" style="width:100%"></a></div>
+                		<div class="c c2"><a href="#"> এক্সপ্রেসওয়েতে ৭০ মিনিট</a></div>
+            		</div>
+       			 </li>
+                 <li>
+        			<div class="wrap clearfix">
+            			<div class="c c1"><a href="#"><img src="img/2.webp" style="width:100%"></a></div>
+                		<div class="c c2"><a href="#"> এক্সপ্রেসওয়েতে ৭০ মিনিট</a></div>
+            		</div>
+       			 </li>
+                   
+    		</ul>
+            </div>
+            <div class="col r2-col3">
+                7
+            </div>
+        </div>
+        <div class="row lastRow clearfix">
+            <div class="col r3-col1">8</div>
+            <div class="col r3-col2">9</div>
+            
+        </div>
+    </div>
+</body>
+
+</html>

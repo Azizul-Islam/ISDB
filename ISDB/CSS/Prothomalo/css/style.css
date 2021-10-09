@@ -1,0 +1,104 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+/* header part css */
+.containerBorder {
+    width: 100%;
+ 
+    box-sizing: border-box;
+    border-bottom: 1px solid #CCCCCC;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.row {
+    width: 100%;
+}
+
+.col {
+    float: left;
+    margin-right: 20px;
+    background: #fff;
+
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+.logoPart {
+    width: calc(30% - 20px);
+
+}
+
+.menuPart {
+    width: 70%;
+    margin-right: 0;
+}
+.menuPart ul li{
+    float: left;
+    
+    
+}
+.menuPart ul li a{
+    text-decoration: none;
+    display: block;
+    color: #666665;
+    padding: 10px;
+}
+.menuPart ul li:hover a{
+    background: #EFEFEC;
+    border-bottom: 2px solid red;
+}
+.updateSection {
+    width: 100%;
+}
+
+.mainContainer {
+    width: 100%;
+    background: #F0F0ED;
+    min-height: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+.col-img {
+    width: calc(40% - 20px);
+
+}
+
+.col-content {
+    width: calc(28% - 20px);
+ 
+    
+}
+
+.col-img1 {
+    width: 32%;
+    margin-right: 0;
+}
+.contentLogo{
+    width: calc(30% - 20px);
+}
+.contentText{
+    width: 70%;
+    margin-right: 0;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data type</title>
+    <style>
+        .prompt{
+            font-family: verdana;
+            font-weight: bold;
+            color: #8b6952;
+            background-color: #d3c75e;
+            font-size: 25px;
+        }
+        body{
+            background-color: #db4347;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="demo"></h2>
+    <div class="prompt"></div>
+    
+    <script>
+        var carName1="Volvo XC60";
+        var carName2="Volvo XC70";
+        var sample='This is my first "data type"';
+        document.getElementById("demo")
+        .innerHTML=carName1+"<br>"+carName2+"<br>"+sample;
+        var yourName;
+        yourName=prompt("Enter your name:", "Name");
+        document.write("Welcome, "+yourName);
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: verdana;
+            background: #a91723;
+            color: #fcc0b9;
+            font-weight: bold;
+            font-size: 10pt;
+        }
+    </style>
+</head>
+
+<body>
+    <center><br>
+        Decimal to Hexadecimal Converter
+    </center><br>
+    <form action="" name="convert">
+        <input type="text" name="dec1" size="3">
+        <input type="text" name="dec2" size="3">
+        <input type="text" name="dec3" size="3">
+        <-Enter decimal numbers here:<br>
+            <input type="text" name="hex" size="6">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <-View hexadecimal number here<p>
+                <input type="button" value="Convert to hexadecimal" onclick="dec2hex()">
+    </form>
+
+    <script>
+        function dec2hex() {
+            var accum = "";
+            for (i = 0; i < 3; i++) {
+                var dec = document.convert.elements[i].value;
+                var toNum = Math.floor(dec);
+                var toHex = toNum.toString(16);
+                if (toHex.length == 1) {
+                    toHex = "0" + toHex;
+                }
+                accum += toHex;
+            }
+            document.convert.hex.value = accum;
+        }
+
+    </script>
+</body>
+
+</html>

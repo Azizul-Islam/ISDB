@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #uk{
+            background: blue;
+            height: 500px;
+            width: 500px;
+            position: relative; 
+        }
+        #london{
+            background: yellow;
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -150px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="uk">
+       UK
+        <div id="london">
+            London
+        </div>
+    </div>
+    <script>
+        var uk=document.getElementById('uk');
+        var london=document.getElementById('london');
+        
+        function welcome_to_uk(){
+            console.log("welcome to uk");
+        }
+        function welcome_to_london(){
+            console.log("welcome to london");
+            event.stopPropagation();
+        }
+        uk.addEventListener('click',welcome_to_uk,false);
+        london.addEventListener('click',welcome_to_london,false);
+    </script>
+</body>
+</html>

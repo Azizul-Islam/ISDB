@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+    </head>
+    <body>
+        <div>
+        <input type="text" id="txtNum1" size="4" style="text-align:center" />
+        <select id="cmbOparator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">*</option>
+        </select>
+        <input type="text" id="txtNum2" size="4" style="text-align:center"  />
+        <button id="btnEqual" onclick="process()">=</button>
+    </div>
+    <div id="display"> </div>
+
+       <script>          
+            function calculate(x,y,oparator){ 
+               if(oparator=="+"){
+                   return x+y;
+               }else if(oparator=="-"){
+                   return x-y;
+               }else if(oparator=="/"){
+                   return x/y;
+               }else if(oparator=="*"){
+                   return x*y;
+               }
+
+            }
+            
+            function process(){
+                var x=parseFloat(document.getElementById("txtNum1").value);
+                var y=parseFloat(document.getElementById("txtNum2").value);
+                var o=document.getElementById("cmbOparator").value;
+
+                var result=calculate(x,y,o);
+                document.getElementById("display").innerHTML=result;
+            }     
+            
+            
+           
+           
+       </script>
+    </body>
+</html>

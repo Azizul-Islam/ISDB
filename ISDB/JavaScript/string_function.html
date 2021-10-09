@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show">IsDB Round 45</div>
+    <div id="output"></div>
+    
+    <script>
+        var text=document.getElementById("show").innerHTML;
+        var text=text.replace(" ","");
+//        var index=text.indexOf("D");
+//        alert(index);
+        var color=["red","green","blue","orange","pink","navy","crimson","blue","black","yellow","brown","red","green","orange"];
+        width=10;
+        for(i=0;i<text.length;i++){
+            var element=document.getElementById("output");
+            element.innerHTML+="<div style='color:"+color[i]+";width:20px;border:1px solid gray;transform:rotate(45deg);text-align:center;border-radius:20px;margin-left:"+width*i+"px ;'>"+text[i]+"</div>"
+        }
+    </script>
+</body>
+</html>

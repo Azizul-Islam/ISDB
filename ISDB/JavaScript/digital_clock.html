@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Clock</title>
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <style>
+        .clock {
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: #17d4fe;
+            padding: 0 5px;
+            border: 1px solid #17d4fe;
+            font-size: 88px;
+
+        }
+        .title{
+            font-size: 50px;
+            color: #17d4fe;
+            text-align: center;
+        }
+        body {
+            background: #000;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 class="title">This is Azizul Islam & my clock says</h1>
+
+    <div id="digitalClock" class="clock"></div>
+
+    <script>
+        function showTime() {
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            var session = (h < 12) ? "PM" : "AM";
+
+            if (h == 0) {
+                h = 12;
+            }
+            if (h > 12) {
+                h = h - 12;
+
+            }
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+
+
+            var times = h + ":" + m + ":" + s + " " + session;
+            document.getElementById("digitalClock").innerHTML = times;
+            setTimeout(showTime, 1000);
+        }
+        showTime();
+
+    </script>
+
+</body>
+
+</html>

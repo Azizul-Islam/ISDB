@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="f">
+        <div>
+            Name<br />
+            <input type="text" name="name" placeholder="Enter your name">
+        </div>
+        <div>
+            E-mail<br />
+            <input type="text" name="email" placeholder="Enter your E-mail">
+        </div>
+        <div>
+            Password<br />
+            <input type="password" value="" name="password" placeholder="Enter your password">
+        </div>
+        <div>
+            Gender<br />
+            <input type="radio" value="Male" name="rdoGender">Male
+            <input type="radio" value="Female" name="rdoGender">Female
+        </div>
+        <div>
+            City<br />
+            <select name="cmbCity">
+                <option>Dhaka</option>
+                <option>Rajsahi</option>
+                <option>Rangpur</option>
+                <option>Bogra</option>
+            </select>
+        </div>
+        <div>
+            Subject<br />
+            <input type="checkbox" name="chkSubject" value="Bangla">Bangla
+            <input type="checkbox" name="chkSubject" value="English">English
+            <input type="checkbox" name="chkSubject" value="Mathmetics">Mathmetics
+            <input type="checkbox" name="chkSubject" value="Accounting">Accounting
+            <input type="checkbox" name="chkSubject" value="Physics">Physics
+            <input type="checkbox" name="chkSubject" value="Chemistry">Chemistry
+            <input type="checkbox" name="chkSubject" value="Islam">Islam
+        </div>
+        <button onclick="readData()">Click</button>
+    </form>
+
+    <script>
+        function readData() {
+            var name = document.f.name.value;
+            var email = document.f.email.value;
+            var password = document.f.password.value;
+            var city = document.f.cmbCity.value;
+            
+            var gender="";
+            var subjects="";
+            for(i=0;i<document.f.rdoGender.length;i++){
+                if(document.f.rdoGender[i].checked){
+                    gender=document.f.rdoGender[i].value;
+                }
+            }
+            for(i=0;i<document.f.chkSubject.length;i++){
+                if(document.f.chkSubject[i].checked){
+                    subjects+=document.f.chkSubject[i].value+"<br/>";
+                }
+            }
+            var w=open("","","width=400,height=400");
+            w.document.write(name+"<br/>"+email+"<br/>"+password+"<br/>"+city+"<br/>"+gender+"<br/>"+subjects+"<br/>");
+            w.document.write("<input type='button' onclick='self.close()' value='Close' />");
+            w.document.write("<input type='button' onclick='self.print()' value='Print' />");
+        }
+
+    </script>
+
+</body>
+
+</html>

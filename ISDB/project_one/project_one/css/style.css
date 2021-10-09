@@ -1,0 +1,182 @@
+/*basic css start */
+.section-padding{
+    padding: 70px 0;
+}
+ul,ol{
+    list-style-type: none;
+}
+/*basic css end*/
+
+.carouselOpacity{
+    opacity: 0.9;
+}
+.parent{
+    position: relative;
+}
+.customNav{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    opacity: 0.8;
+    z-index: 999;
+}
+
+.carousel-caption {
+    right: none;
+    bottom: none;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+    color: black;
+    
+}
+.carousel-item h2{
+    font-size: 45px;
+    letter-spacing: 5px;
+    color: #7960F8;
+
+}
+.carousel-item p{
+    font-size: 20px;
+    color: #7960F8;
+
+}
+
+
+/*about part css */
+
+#about{
+    background: #F3EFE0;
+}
+.feature-inner span{
+    color: #7960F8;
+    font-size: 20px;
+}
+.featureBg{
+
+}
+.contact-bg{
+    background: #212529;
+    background-image: url(../img/map-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+/*contact part css */
+#contact h1{
+    color: #fff;
+    text-align: center;
+}
+#contact textarea,
+#contact input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold
+}
+#contact textarea{
+    min-height: 222px;
+    
+}
+.btn-align{
+        margin: 0 auto;
+        width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* blog part css */
+.roatate-border p{
+    position: relative;
+    padding-bottom: 40px;
+   margin-bottom: 20px;
+    display: inline-block
+}
+.roatate-border p:before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    background: rgb(163, 162, 162);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+}
+.roatate-border p:after{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background: rgb(163, 162, 162);
+    left: 50%;
+    bottom: -10.5px;
+    transform: translateX(-50%) rotate(45deg);
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) rotate(45deg);
+    z-index: 99;  
+}
+
+h2,h4{
+    color: #7960F8;
+}
+.profile-title p{
+    font-size:22px;
+}
+#blog  p{
+        color: #727878;
+       
+    }
+.about-profile p{
+        padding-right: 20px
+    }
+
+.customBtn{
+    border-radius: 30px;
+
+}
+
+.exprienceBg{
+    background: #F3EFE0;
+}
+
+
+
+
+/* ablities part css*/
+#ablities ul li .ablities-title{
+    display: inline-block;
+}
+#ablities ul li{
+    padding: 4px 0;
+}
+#ablities ul li .ablities-score{
+    float: right;
+}
+.ablities-inner ul li:hover{
+    background: #F2F2F2;
+    transition: 0.5s;
+}
+.ablities-inner ul li:hover .ablities-score span{
+    padding-left: 3px;
+    transition: 0.5s;
+}
+.ablities-inner .ablities-score span{
+    color: #7960F8; 
+}
+.ablities-inner .ablities-title{
+    color: #727878;
+}
+
+http://www.pascalvangemert.nl/#/profile

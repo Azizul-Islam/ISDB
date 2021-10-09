@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="isDB">IsBD round</div>
+    <div id="output"></div>
+    <script>
+        var text=document.getElementById("isDB").innerHTML;
+
+        //var index=text.indexOf("round");
+        //alert(index);
+
+        var color=["red","green","yellow","pink","blue","skyblue","purple","navy","lightblue","gray","orange","black"]
+        width=10;
+        for(i=0;i<text.length;i++){
+
+            el=document.getElementById("output");
+            el.innerHTML+="<div style='color:"+color[i]+";margin-left:"+width*i+"px;font-size:20px;border:1px solid gray;border-radius:20px; width:20px; transform: rotate(45deg);text-align:center;'>"+text[i]+"</div>";
+           // el.style.cssText="border";
+
+        }
+
+
+
+    </script>
+</body>
+</html>

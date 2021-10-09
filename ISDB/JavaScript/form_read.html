@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #db4347;">
+    <form name="f" action="" method="post" onsubmit="submitForm()">
+        <div>
+            <label for="">Name</label><br>
+            <input type="text" name="txtName" onkeyup="nameValidation()" onblur="nameValidation()">
+            <span id="errName"></span>
+        </div>
+        <div>
+            <label for="">Email</label><br>
+            <input type="text" name="txtEmail" onblur="mailCheck()" onkeyup="mailCheck()">
+            <span id="errMail"></span>
+        </div>
+        <div>
+            <label for="">Gender</label><br>
+            <input type="radio" name="rdoGender" value="Male" >Male
+            <input type="radio" name="rdoGender" value="Female" >Female
+            <span id="errorGender"></span>
+        </div>
+        <div>
+            <label for="">City</label><br>
+            
+            <select name="cmbCity" id="">
+                <option >Dhaka</option>
+                <option >Pabna</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Subject</label><br>
+            <input type="checkbox" name="chkSubject" value="Bangla" >Bangla
+            <input type="checkbox" name="chkSubject" value="English" >English
+            <input type="checkbox" name="chkSubject" value="Math" >Math
+            <input type="checkbox" name="chkSubject" value="Accounting" >Accounting
+            <input type="checkbox" name="chkSubject" value="Physics" >Physics
+            <span id="errorGender"></span>
+        </div>
+        <div>
+            <label for="">Address</label><br>
+            <textarea name="txtAddress" id="" cols="30" rows="5"></textarea>
+        </div>
+        <div>
+            <button type="button" onclick="readForm()">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        function submitForm(){
+            if(confirm("Are you sure?")){
+                alert("Submited");
+            }else{
+                alert("Cancle");
+            }
+        }
+        function readForm(){
+            var name=document.f.txtName.value;
+            var email=document.f.txtEmail.value;
+            var city=document.f.cmbCity.value;
+            var address=document.f.txtAddress.value;
+            var gender="";
+            var subjects="";
+            for(i=0;i<document.f.rdoGender.length;i++){
+                if(document.f.rdoGender[i].checked){
+                    gender=document.f.rdoGender[i].value;
+                }
+            }
+            for(i=0;i<document.f.chkSubject.length;i++){
+                if(document.f.chkSubject[i].checked){
+                    subjects+=document.f.chkSubject[i].value+"<br>";
+                }
+            }
+            var w=window.open(" "," ","height:400px,width:400px");
+            var t=w.document;
+            t.write("Name: "+name+"<br>"+"Email: "+email+"<br>"+"Ciry: "+city+"<br>"+"Address: "+address+"<br>"+"Gender: "+gender+"<br>"+"Subject: "+subjects);
+            t.write("<input type='button' value='Close' onclick='self.close()' />");
+            t.write("<input type='button' value='Print' onclick='self.print()' />");
+            
+        }
+
+        function nameValidation(){
+            var name=document.f.txtName.value;
+            var errName=document.getElementById("errName");
+            errName.style.color="red";
+            if(!/^[a-zA-Z]{2,}$/.test(name)){
+                errName.innerHTML="Your name is invalid";
+            }else{
+                errName.innerHTML="";
+            }
+        }
+        function mailCheck(){
+            var email = document.f.txtEmail.value;
+            var errMail=document.getElementById("errMail");
+            errMail.style.color="red";
+            if(!/^[a-zA-Z]+[a-zA-Z0-9]*[.]*[a-zA-Z0-9]+[@]?[a-zA-Z]+[.]?[a-zA-z]{2,3}$/.test(email)){
+                errMail.innerHTML="Your email is invalid";
+            }else{
+                errMail.innerHTML="";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+ 
+<title>Basic Calculator</title>
+<style>
+  input[type=button]{width:42px;box-sizing:border-box;margin-bottom:4px;}
+</style>
+</head>
+ 
+<body>
+<form name="Calc" style="width:190px; box-shadow:0 0 1px 1px lightgray;">
+<div style="position:relative;padding:5px;">
+<input type="text" name="txtDisplay" style="width:100%;padding:4px;box-sizing:border-box;">
+</div>
+ 
+<div style="position:relative;padding:5px">
+ 
+<input type="button" name="one"   value="1" OnClick="txtDisplay.value += '1'">
+<input type="button" name="two"   value="2" OnCLick="txtDisplay.value += '2'">
+<input type="button" name="three" value="3" OnClick="txtDisplay.value += '3'">
+<input type="button" name="plus"  value="+" OnClick="txtDisplay.value += ' + '">
+<br>
+<input type="button" name="four"  value="4" OnClick="txtDisplay.value += '4'">
+<input type="button" name="five"  value="5" OnCLick="txtDisplay.value += '5'">
+<input type="button" name="six"   value="6" OnClick="txtDisplay.value += '6'">
+<input type="button" name="minus" value="-" OnClick="txtDisplay.value += ' - '">
+<br>
+<input type="button" name="seven" value="7" OnClick="txtDisplay.value += '7'">
+<input type="button" name="eight" value="8" OnCLick="txtDisplay.value += '8'">
+<input type="button" name="nine"  value="9" OnClick="txtDisplay.value += '9'">
+<input type="button" name="times" value="x" OnClick="txtDisplay.value += ' * '">
+<br>
+<input type="button" name="clear" value="c" OnClick="txtDisplay.value = ''">
+<input type="button" name="zero"  value="0" OnClick="txtDisplay.value += '0'">
+<input type="button" name="DoIt"  value="=" OnClick="txtDisplay.value = eval(txtDisplay.value)">
+<input type="button" name="div"   value="/" OnClick="txtDisplay.value += ' / '">
+<br>
+<input type="button" name="dot"  value="." OnClick="txtDisplay.value += '.'">
+ 
+</div>
+</form>
+</body>
+</html>

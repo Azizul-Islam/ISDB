@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+   <form action="" name="fname">
+    <div>
+        <input type="text" name="Name" id="userName">
+        <button type="button" value="button" onclick="uName()">Name</button>
+    </div>
+    <div>
+        <input type="text" name="email">
+        <button type="button" onclick="uEmail()">Check mail</button>
+    </div>
+    
+    
+    </form>
+    <script>
+        function uEmail(){
+            var email=document.fname.email.value;
+            var regx2=/^[a-zA-Z]+[a-zA-Z0-9]*[.]?[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.][a-zA-Z]{2,3}$/;
+            if(regx2.test(email)){
+                alert("User email is valid");
+            }else{
+                alert("User email is Invalid");
+            }
+        }
+        function uName() {
+            var name = document.getElementById("userName").value;
+            var regx = /^[a-zA-Z]{3,15}$/;
+            if (regx.test(name)) {
+                alert("User name is valid: \"");
+            }else{
+                alert("User name is Invalid");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

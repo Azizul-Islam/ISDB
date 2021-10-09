@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+    </head>
+    <body>
+       <script>
+           var numbers=[3,4,6,-3,0,3,-7,-2,0,0];
+            
+           var positive=0;
+           var negative=0;
+           var zero=0;
+
+           for(i=0;i<numbers.length;i++){
+           
+              if(numbers[i]>0){
+                positive++;
+              }else if(numbers[i]<0){ 
+                negative++;
+              }else{
+                zero++;
+              }
+
+           }//end loop
+
+           document.write("Positive Numbers: "+positive+"<br>");
+           document.write("Negative Numbers: "+negative+"<br>");
+           document.write("Zero Numbers: "+zero);
+            
+           
+       </script>
+    </body>
+</html>

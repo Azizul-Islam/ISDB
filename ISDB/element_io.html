@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txtNum"  > 
+    <div id="display"></div>
+    <textarea id="address"></textarea>
+    <div id="comment">This is a text</div>
+    <script> 
+    show();
+
+    function show(){  
+
+       document.getElementById("txtNum").value=398;
+       document.getElementById("display").innerHTML=333;
+       document.getElementById("address").innerHTML="333";
+      alert(document.getElementById("comment").innerHTML);
+
+       document.getElementById("address").style.border="3px solid gray";
+       document.getElementById("address").style.cssText="color:#fff;background-color:red";
+
+    }
+
+    </script>
+</body>
+</html>

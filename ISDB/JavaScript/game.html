@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var guess = Math.floor(Math.random() * 100) + 1;
+        document.write(guess);
+        var score = 1000;
+        for (i = 1; i <= 10; i++) {
+            var number = prompt("Say what you guess?");
+            number = parseInt(number);
+            if (isNaN(number)) {
+                alert("Number not found.");
+            } else {
+
+                if (number > guess) {
+                    alert("Your number is greater.");
+                } else if (number < guess) {
+                    alert("Your number is smaller.");
+                } else {
+                    alert("Yahoo!You win the game!" + i + "times.");
+                    document.write("Your score is " + Math.ceil(score / i));
+                    break;
+                }
+                if(i==10){
+                    alert("You lose!Game Over.");
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

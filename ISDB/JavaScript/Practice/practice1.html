@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="f">
+        <div>
+            <input type="text" name="txtname" onkeyup="validateName()" onblur="validateName()">
+            <span id="errName"></span>
+        </div>
+        <div>
+            <input type="text" name="txtemail" onkeyup="validateEmali()" onblur="validateEmali()">
+            <span id="errEmail"></span>
+        </div>
+        <button onclick="submitForm()">Submit</button>
+    </form>
+    
+    
+    <script>
+        function submitForm(){
+            if(confirm("Are your sure?")){
+                alert("Submited done");
+            }else{
+                alert("Cancel")
+            }
+        }
+        function validateName(){
+            var name = document.f.txtname.value;
+            var errName = document.getElementById("errName");
+            errName.style.color="red";
+            if(!(/^[a-zA-Z]{3,}$/.test(name))){
+                errName.innerHTML = "Enter valid name";
+            }else{
+                errName.innerHTML = "";
+            }
+        }
+        function validateEmali(){
+            var email = document.f.txtemail.value;
+            var errEmail = document.getElementById("errEmail");
+            errEmail.style.color="red";
+            if(!(/^[a-zA-z]+[.]*[a-zA-Z0-9]*[@]?[a-zA-z]+[.][a-zA-z]{2,3}$/.test(email))){
+                errEmail.innerHTML ="Enter your valid Email";
+            }else{
+                errEmail.innerHTML = "";
+            }
+        }
+    </script>
+</body>
+</html>

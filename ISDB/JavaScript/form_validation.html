@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="f" onsubmit="formSubmit()">
+        <div>
+            Name<br/>
+            <input type="text" onkeyup="nameCheck()" onblur="nameCheck()"  name="txtName">
+            <span id="errName"></span>
+        </div>
+         <div>
+            Email<br/>
+            <input type="text" name="txtEmail" onkeyup="emailCheck()" onblur="emailCheck()">
+            <span id="errEmail"></span>
+        </div>
+         <div>
+            Name<br/>
+            <input type="Number" name="txtNumber">
+            <span id="errNumber"></span>
+        </div>
+         <div>
+           <br/>
+            <input type="submit" value="Submit">
+           
+        </div>
+    </form>
+    <script>
+        function formSubmit(){
+            if(confirm("Are you sure?")){
+                alert("Submitted");
+            }else{
+                alert("Cancel");
+            }
+        }
+        
+        function nameCheck(){
+            var name = document.f.txtName.value;
+            var errName = document.getElementById('errName');
+            errName.style.color="red";
+            if(!(/^[a-zA-Z]{2,}$/.test(name))){
+                errName.innerHTML="Name field is invalid";
+            }else{
+                errName.innerHTML="";
+            }
+        }
+        function emailCheck(){
+            var email = document.f.txtEmail.value;
+            var errEmail= document.getElementById('errEmail');
+            errEmail.style.color="red";
+            if(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))){
+                errEmail.innerHTML ="You have entered an invalid email address!";
+            }else{
+                errEmail.innerHTML="";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body onLoad="onShow()">
+        <div id="output">
+            
+        </div>
+        <div id="two"></div>
+        
+        <script>
+//        var tag=window.document.getElementById("output");
+//           //tag.innerHTML="This is my First program.";
+//            var width=screen.width;
+//            var height=screen.height;
+//            tag.innerHTML=width+"X"+height;
+//            //tag.style.backgroundColor="lightgray";
+//            //tag.style.padding="10px";
+//            //tag.style.border="1px solid red";
+//            tag.style.cssText="border:1px solid green;padding:10px;background-color:lightgray;";
+//            
+            //counter part
+            var i=0;
+            function onShow(){
+                var counter=document.getElementById("two");
+                counter.innerHTML=i++;
+                if(i>20)
+                    i=0;
+                
+                setTimeout("onShow()",100);
+            }
+        
+            
+        </script>
+    </body>
+</html>
