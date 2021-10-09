@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" >
+		<title>jQuery</title>
+		
+	</head>
+	<body>
+	<form action="#" method="GET">
+	<button>Go</button>
+	<input type="text" name="txtId" id="txtId" />
+	<div id="output"></div>
+	<form>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+		$(function(){
+			$('button').on("click",function(){
+				$.ajax({
+				url:"get_cetegory.php?user_id=id",
+				method:'get',
+				let id=$('#txtId').val();
+				$('#output').html(id);
+				});
+				
+				
+			});
+		});
+	</script>
+	</body>
+</html>

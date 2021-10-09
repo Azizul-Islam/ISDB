@@ -1,0 +1,23 @@
+.content-inner{
+    background: #ffffff;
+    min-height: 200px;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.content-inner .image-box{
+    float: left;
+    width: 30%;
+}
+.main-content{
+    float: left;
+    margin-left: 15px;
+    width: calc(70% - 15px);
+}
+.image-box img{
+    height: 150px;
+    
+}
+

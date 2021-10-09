@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .one{
+            height: 100px;
+            width: 100px;
+            background: red;
+            margin-top:30px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Click</button>
+    <!-- <div></div> -->
+    <div class="one"></div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                // $("div").animate({
+                //     left: '500px',
+                //     width: '+=200px',
+                //     height: '+=200px',
+                //     opacity: '0.5'
+                // });
+                var one=$(".one");
+                one.animate({height:'200px',opacity:'0.5'},"slow");
+                one.animate({width:'200px',opacity:'0.8'},"slow");
+                one.animate({height:'100px',opacity:'0.5'},"slow");
+                one.animate({width:'100px',opacity:'1'},"slow");
+            });
+        });
+    </script>
+</body>
+</html>

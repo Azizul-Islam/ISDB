@@ -1,0 +1,1 @@
+update cms_users set username='aziz',password='9db06bcff9248837f86d1a6bcf41c9e7',role_id='1',inactive='0' where id='3'

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" >
+		<title>jQuery</title>
+		<style>
+			.div1{height:100px;width:100px;background:red;margin-bottom:10px;display:none}
+			.div2{height:100px;width:100px;background:green;margin-bottom:10px;display:none}
+			.div3{height:100px;width:100px;background:blue;margin-bottom:10px;display:none}
+			#btn{
+				width:300px;
+				background:#888;
+				color:#fff;
+				padding:10px;
+				margin:0 auto;
+				text-align:center;
+				cursor:pointer;
+			}
+			.slidepart{
+				width:300px;
+				background:black;
+				color:#fff;
+				margin:0 auto;
+				padding:10px;
+				
+			}
+		</style>
+	</head>
+	<body>
+	<button>Click Here</button>
+	<div class="div1"></div>
+	<div class="div2"></div>
+	<div class="div3"></div>
+	
+	<div id="btn">Click Me</div>
+	<div class="slidepart">This is jQuery i'm learning jQuery form isdb.This is jQuery i'm learning jQuery form isdb.This is jQuery i'm learning jQuery form isdb.</div>
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+	//fadeIn,fadeOut,fadeToggle
+		$(function(){
+			$("button").on("click",function(){
+				$(".div1").fadeToggle();
+				$(".div2").fadeToggle("slow");
+				$(".div3").fadeToggle(1000);
+			});
+			//slideDown,slideUp,slideToggle
+			$("#btn").click(function(){
+				$(".slidepart").slideToggle("slow");
+			});
+		});
+	</script>
+	</body>
+</html>
